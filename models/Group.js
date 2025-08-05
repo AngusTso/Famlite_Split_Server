@@ -19,8 +19,8 @@ const GroupSchema = new mongoose.Schema({
     },
   ],
   inviteCode: { type: String, required: true, unique: true, index: true },
-  inviteLink: { type: String, required: true, unique: true },
-  inviteExpriedAt: { type: String },
+  inviteLink: { type: String, required: true, unique: true, index: true },
+  inviteExpiredAt: { type: Date },
   createdAt: { type: Date, default: Date.now, index: true },
   updatedAt: { type: Date, default: Date.now },
 });
